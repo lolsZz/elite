@@ -48,21 +48,13 @@ def rawdog(prompt: str, config, llm_client):
 
 
 def banner(config):
+    print(f"Welcome to Rawdog v{__version__}")
+    print("Your AI-powered command-line assistant")
     if config.get("leash"):
-        print(f"""\
-        / \__
-_      (    @\___   ┳┓┏┓┏ ┓┳┓┏┓┏┓
-  \    /         O  ┣┫┣┫┃┃┃┃┃┃┃┃┓
-   \  /   (_____/   ┛┗┛┗┗┻┛┻┛┗┛┗┛
-    \/\/\/\/   U    Rawdog v{__version__}
-          OO""")
+        print("Running in leashed mode")
     else:
-        print(f"""\
-   / \__
-  (    @\___   ┳┓┏┓┏ ┓┳┓┏┓┏┓
-  /         O  ┣┫┣┫┃┃┃┃┃┃┃┃┓
- /   (_____/   ┛┗┛┗┗┻┛┻┛┗┛┗┛
-/_____/   U    Rawdog v{__version__}""")
+        print("Running in unleashed mode")
+    print("-" * 40)
 
 
 def main():
